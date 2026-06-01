@@ -1,0 +1,21 @@
+{
+  "id": "content-draft",
+  "name": "Content Draft",
+  "description": "Draft a short document, then hold it for Captain review. Stage 1 (draft) auto-progresses; stage 2 (review) is a human gate.",
+  "trigger": { "type": "manual" },
+  "stages": [
+    {
+      "id": "draft",
+      "label": "Draft",
+      "command": "worker/draft-doc",
+      "gate": { "type": "auto" },
+      "next": "review"
+    },
+    {
+      "id": "review",
+      "label": "Review",
+      "command": "worker/review-doc",
+      "gate": { "type": "review", "instructions": "Read the draft and the review notes; approve to finish the run." }
+    }
+  ]
+}

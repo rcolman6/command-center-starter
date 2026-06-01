@@ -1,0 +1,24 @@
+{
+  "id": "vault-to-post",
+  "name": "Vault → Post",
+  "description": "Query the CoachingVault for material on a topic, output the findings, then draft a post from them for Captain review.",
+  "trigger": { "type": "manual" },
+  "stages": [
+    {
+      "id": "findings",
+      "label": "Vault Findings",
+      "command": "worker/vault-query",
+      "gate": { "type": "auto" },
+      "next": "post"
+    },
+    {
+      "id": "post",
+      "label": "Draft Post",
+      "command": "worker/vault-post",
+      "gate": {
+        "type": "review",
+        "instructions": "Read the findings and the drafted post. Check the voice (no em-dashes, no banned phrases) and that every claim traces to a finding. Approve to finish the run — the post is yours to publish."
+      }
+    }
+  ]
+}

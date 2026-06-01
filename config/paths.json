@@ -1,0 +1,11 @@
+{
+  "projects": {
+    "command-center": {
+      "path": "/home/romij/claude_accessible/command-center",
+      "defaultBranch": "main"
+    }
+  },
+  "knowledgeBase": "/home/romij/notes",
+  "coachingVault": "/home/romij/claude_accessible/CoachingVault",
+  "outputs": "workers/workspace/outputs"
+}

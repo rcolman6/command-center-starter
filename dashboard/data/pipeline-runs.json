@@ -1,0 +1,139 @@
+[
+  {
+    "id": "run-1780332889250-xr8pak",
+    "pipelineId": "content-draft",
+    "pipelineSlug": "Content Draft",
+    "status": "completed",
+    "startedAt": "2026-06-01T16:54:49.250Z",
+    "completedAt": "2026-06-01T17:06:48.702Z",
+    "trigger": {
+      "type": "manual",
+      "source": "dashboard"
+    },
+    "stageState": {
+      "draft": {
+        "status": "completed",
+        "taskIds": [
+          "task-1780332889257-20o7eg"
+        ],
+        "healAttempts": 0
+      },
+      "review": {
+        "status": "completed",
+        "taskIds": [
+          "task-1780332999345-d6mjom"
+        ],
+        "healAttempts": 0
+      }
+    },
+    "events": [
+      {
+        "stage": "draft",
+        "type": "started",
+        "taskId": "task-1780332889257-20o7eg",
+        "ts": "2026-06-01T16:54:49.263Z"
+      },
+      {
+        "stage": "draft",
+        "type": "gate_passed",
+        "taskId": "task-1780332889257-20o7eg",
+        "ts": "2026-06-01T16:56:39.337Z"
+      },
+      {
+        "stage": "review",
+        "type": "started",
+        "taskId": "task-1780332999345-d6mjom",
+        "ts": "2026-06-01T16:56:39.350Z"
+      },
+      {
+        "stage": "review",
+        "type": "approved",
+        "taskId": "task-1780332999345-d6mjom",
+        "ts": "2026-06-01T17:06:48.696Z"
+      },
+      {
+        "stage": "review",
+        "type": "completed",
+        "taskId": "task-1780332999345-d6mjom",
+        "ts": "2026-06-01T17:06:48.701Z"
+      }
+    ]
+  },
+  {
+    "id": "run-1780335270443-bbjouy",
+    "pipelineId": "vault-to-post",
+    "pipelineSlug": "Vault → Post",
+    "status": "running",
+    "startedAt": "2026-06-01T17:34:30.443Z",
+    "completedAt": null,
+    "trigger": {
+      "type": "manual",
+      "source": "dashboard"
+    },
+    "stageState": {
+      "findings": {
+        "status": "running",
+        "taskIds": [
+          "task-1780335270451-1ntbnb"
+        ],
+        "healAttempts": 0
+      }
+    },
+    "events": [
+      {
+        "stage": "findings",
+        "type": "started",
+        "taskId": "task-1780335270451-1ntbnb",
+        "ts": "2026-06-01T17:34:30.456Z"
+      }
+    ]
+  },
+  {
+    "id": "run-1780335778919-vfh87x",
+    "pipelineId": "vault-to-post",
+    "pipelineSlug": "Vault → Post",
+    "status": "awaiting_review",
+    "startedAt": "2026-06-01T17:42:58.919Z",
+    "completedAt": null,
+    "trigger": {
+      "type": "manual",
+      "source": "dashboard"
+    },
+    "stageState": {
+      "findings": {
+        "status": "completed",
+        "taskIds": [
+          "task-1780335778925-mbg2fb"
+        ],
+        "healAttempts": 0
+      },
+      "post": {
+        "status": "running",
+        "taskIds": [
+          "task-1780335995442-19eq78"
+        ],
+        "healAttempts": 0
+      }
+    },
+    "events": [
+      {
+        "stage": "findings",
+        "type": "started",
+        "taskId": "task-1780335778925-mbg2fb",
+        "ts": "2026-06-01T17:42:58.931Z"
+      },
+      {
+        "stage": "findings",
+        "type": "gate_passed",
+        "taskId": "task-1780335778925-mbg2fb",
+        "ts": "2026-06-01T17:46:35.432Z"
+      },
+      {
+        "stage": "post",
+        "type": "started",
+        "taskId": "task-1780335995442-19eq78",
+        "ts": "2026-06-01T17:46:35.451Z"
+      }
+    ]
+  }
+]

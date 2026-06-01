@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+dashboard/node_modules/
+
+# Next.js build output
+dashboard/.next/
+
+# Disposable worker scratch (workspace is not committed)
+workers/workspace/outputs/*
+workers/workspace/notes/*
+workers/workspace/sessions/*
+
+# Worker logs
+workers/logs/*.log
+workers/logs/runs.jsonl
+
+# Temp + OS cruft
+*.tmp
+*.tmp.*
+.DS_Store
+
+# Keep placeholder files so empty dirs are tracked
+!**/.gitkeep
